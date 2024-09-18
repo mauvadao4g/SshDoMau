@@ -4,6 +4,6 @@
 
 *PROJETO EM BETA🍷🗿
 ```
-apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/ScottBrabo/PR0/main/ssh-plus)
+apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/mauvadao4g/SshDoMau/main/ssh-plus)
 
 ```
