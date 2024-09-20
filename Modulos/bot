@@ -1,11 +1,11 @@
 #!/bin/bash
 #===================================================
-#   SCRIPT: BOT SCOTT
+#   SCRIPT: BOT MAUVADAO
 #   DATA ATT: 18 de JuL 2022
-#   DESENVOLVIDO POR: SCOTT
-#   API SHELLBOT: SCOTT
-#   CONTATO TELEGRAM: http://t.me/SCOTTSSH
-#   CANAL TELEGRAM: http://t.me/SCOTTSSHD
+#   DESENVOLVIDO POR: MAUVADAO
+#   API SHELLBOT: MAUVADAO
+#   CONTATO TELEGRAM: http://t.me/MAUVADAOSSH
+#   CANAL TELEGRAM: http://t.me/MAUVADAO
 #===================================================
 [[ ! -d /etc/SSHPlus ]] && exit 0
 [[ ! -d /etc/bot ]] && exit 0
@@ -890,7 +890,7 @@ sobremim() {
     env_msg="╔═══════•⊱✦⊰•═══════╗\n"
         env_msg+="<b>Scott-PRO</b>\n"
         env_msg+="╚═══════•⊱✦⊰•═══════╝\n\n"
-    msg+="<b>Desenvolvido por:</b> @scottssh\n"
+    msg+="<b>Desenvolvido por:</b> maudavpn\n"
     msg+="<b>Canal Oficial:</b> @SSHPLUS\n\n"
     msg+="Fui criado com o propósito de fornecer informações e ferramentas para gestão VPN em servidores 🐧 GNU/Linux 🐧.\n\n"
     msg+="<b>Menu:</b> /menu\n"
@@ -1356,7 +1356,7 @@ fun_del_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🗑 REMOVER REVENDEDOR 🗑\n\nInforme o user dele [Ex: @scottssh]:" \
+            --text "🗑 REMOVER REVENDEDOR 🗑\n\nInforme o user dele [Ex: maudavpn]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1474,7 +1474,7 @@ fun_lim_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "♾ ALTERAR LIMITE REVENDA ♾\n\nInforme o user dele [Ex: @scottssh]:" \
+            --text "♾ ALTERAR LIMITE REVENDA ♾\n\nInforme o user dele [Ex: maudavpn]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1520,7 +1520,7 @@ fun_dat_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "📆 ALTERAR DATA REVENDA 📆\n\nInforme o user dele [Ex: @scottssh]:" \
+            --text "📆 ALTERAR DATA REVENDA 📆\n\nInforme o user dele [Ex: maudavpn]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1632,7 +1632,7 @@ fun_susp_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🔒 SUSPENDER REVENDEDOR 🔒\n\nInforme o user dele [Ex: @scottssh]:" \
+            --text "🔒 SUSPENDER REVENDEDOR 🔒\n\nInforme o user dele [Ex: maudavpn]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -2282,16 +2282,16 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Informe o user dele [Ex: @scottssh]:' \
+                        --text 'Informe o user dele [Ex: maudavpn]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Informe o user dele [Ex: @scottssh]:')
+                'Informe o user dele [Ex: maudavpn]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Erro \n\n⚠️ Informe o user [EX: @scottssh]")" \
+                            --text "$(echo -e "❌ Erro \n\n⚠️ Informe o user [EX: maudavpn]")" \
                             --parse_mode html
                         break
                     }
@@ -2343,7 +2343,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # REMOVE REVENDEDOR
-                '🗑 REMOVER REVENDEDOR 🗑\n\nInforme o user dele [Ex: @scottssh]:')
+                '🗑 REMOVER REVENDEDOR 🗑\n\nInforme o user dele [Ex: maudavpn]:')
                     echo -e "${message_text[$id]}" >$CAD_ARQ
                     _Var=$(sed -n '1 p' $CAD_ARQ | awk -F '@' {'print $2'})
                     [[ -z $_Var ]] && {
@@ -2356,7 +2356,7 @@ while :; do
                     break
                     ;;
                     # ALTERAR LIMITE
-                '♾ ALTERAR LIMITE REVENDA ♾\n\nInforme o user dele [Ex: @scottssh]:')
+                '♾ ALTERAR LIMITE REVENDA ♾\n\nInforme o user dele [Ex: maudavpn]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo -e "Revendedor: ${message_text[$id]}" >$CAD_ARQ
@@ -2433,7 +2433,7 @@ while :; do
                         --parse_mode html
                     # ALTERAR DATA
                     ;;
-                '📆 ALTERAR DATA REVENDA 📆\n\nInforme o user dele [Ex: @scottssh]:')
+                '📆 ALTERAR DATA REVENDA 📆\n\nInforme o user dele [Ex: maudavpn]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
@@ -2488,7 +2488,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # SUSPENDER REVENDEDOR
-                '🔒 SUSPENDER REVENDEDOR 🔒\n\nInforme o user dele [Ex: @scottssh]:')
+                '🔒 SUSPENDER REVENDEDOR 🔒\n\nInforme o user dele [Ex: maudavpn]:')
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \

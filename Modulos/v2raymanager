@@ -491,7 +491,7 @@ echo "App: https://apps.apple.com/br/app/fair-vpn/id1533873488"
 			[[ ! -e '/home/sshplus' ]] && exit 0
 			clear
 			figlet "V2Ray-PRO" | lolcat
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "V2RAY PRO @SCOTTSSH " ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%55s%s%-12s\n' "V2RAY PRO @MAUVADAO " ; tput sgr0
 echo ""
 echo "Para Ativar o (V2RAY) é obrigatório que portas 80 e 443 estejam DESATIVADAS"
 echo "" 

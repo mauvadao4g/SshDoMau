@@ -3,7 +3,7 @@ clear
 ###############################################################
 #Programa para bloquear temporariamente e desbloquear contas de usuario"
 ###############################################################
-#SCOTT PRO MANAGER
+#SshDoMau MANAGER
 ###############################################################
 clear
 while [  "$op"  !=  "3" ]
